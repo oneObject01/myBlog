@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: skyblue;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* 紧贴标题底部 */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3px;
+    /* 距离标题底部 3px */
+    background: white;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    z-index: 10;
+    font-size: 20px;
+    /* 字体大小 */
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    /* 箭头位于简介框上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    /* 与背景颜色一致 */
+}
+
+h1:hover .tooltip {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: skyblue;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 五列 */
+    gap: 10px;
+    /* 方块之间的间距 */
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.box:hover {
+    background-color: skyblue;
+}
